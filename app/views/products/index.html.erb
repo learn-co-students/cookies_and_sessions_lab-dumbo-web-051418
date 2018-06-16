@@ -1,14 +1,17 @@
+<h1>Add Proucts</h1>
 <%= form_tag '/add', method: 'post' do %>
-<% label_tag 'Product' %></br>
+<%= label_tag 'Product' %></br>
 <%= text_field_tag 'product' %></br>
 <%= submit_tag 'add to cart' %>
 <% end %>
 
 <h1>Your Cart:</h1>
 <% if session[:cart] %>
+<ol>
 <% session[:cart].each do |product| %>
-<%= product %>
+<li><%= product %></li>
 <% end %>
+</ol>
 <% else %>
 Nothing is in your cart.
 <% end %>
