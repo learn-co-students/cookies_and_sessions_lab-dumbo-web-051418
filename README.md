@@ -15,7 +15,6 @@ We're going to use this to implement a shopping site. Here's how the site will w
   3. The item is added to their cart. The page shows everything in the user's cart.
 
 ## Instructions
-
 1. Create the cart method in `ApplicationController#cart`, this method should return an array of the items stored in the cart (utilizing the Rails `session` method).
 2. Create a Products controller with two actions, index and add.
 3. Create the routes for the application, we only need two routes, one to display the `Products#index` (the root route) and one to post the products to add them to the cart.
