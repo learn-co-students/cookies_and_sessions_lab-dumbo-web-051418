@@ -1,0 +1,22 @@
+<h1>TwoPawz Knick-Knack Emporium</h1>
+
+<div>
+  <%= form_tag controller: 'products', action: 'add', method: 'post' do %>
+    <%= text_field_tag(
+        :item,
+        params[:item]
+
+    ) %>
+    <%= submit_tag "Submit Item" %>
+  <% end %>
+
+</div>
+
+<div>
+  <ul>
+    <% cart.each do |item| %>
+    <li><%= item %></li>
+    <% end %>
+  </ul>
+
+</div>
